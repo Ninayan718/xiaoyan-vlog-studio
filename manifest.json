@@ -1,7 +1,7 @@
 {
-  "name": "小言在路上 · 视频制作台",
-  "short_name": "小言制作台",
-  "description": "一鱼四吃发布 SOP · 深圳数字游民 vlog 制作台",
+  "name": "小言在路上 · 视频工作台",
+  "short_name": "小言工作台",
+  "description": "亚马逊清仓重启 · 视频制作工作台",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
