@@ -6,279 +6,226 @@
 <meta name="theme-color" content="#FAF8F3">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="小言制作台">
+<meta name="apple-mobile-web-app-title" content="小言工作台">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="icon-192.png">
-<title>小言在路上 | 359的重启 · 视频制作台</title>
+<title>小言在路上 | 亚马逊清仓重启 · 工作台</title>
 <style>:root{
   --bg:#FAF8F3; --card:#FFFFFF; --ink:#33352F; --ink2:#6E7269; --ink3:#9A9E94;
   --line:#E8E5DA; --line2:#D8D4C6;
+  --red:#E8402A; --red-d:#C4331F; --red-l:#FCECE8;
   --green:#5C7F68; --green-l:#EAF1EA; --green-d:#3E5C49;
   --warm:#C0865C; --warm-l:#FAF0E6;
-  --rose:#B4635C; --rose-l:#FBEFEC;
-  --red:#F2453D; --red-l:#FBECEA; --blue:#CFE3EA; --blue-l:#EAF4F7;
+  --blue:#CFE3EA; --blue-l:#EAF4F7;
   --r:14px; --rs:9px;
   --font:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
-.wrap{max-width:640px;margin:0 auto;padding:0 16px 110px}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 100px}
 header{padding:24px 0 12px}
 .brand{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
 h1{font-size:22px;font-weight:600;margin:0;letter-spacing:.5px}
-.brand .sub{font-size:12.5px;color:var(--ink3)}
+.brand .sub{font-size:12.5px;color:var(--red);font-weight:500}
 .motto{margin:9px 0 0;font-size:13.5px;color:var(--green-d);font-weight:500}
 .motto small{display:block;font-weight:400;color:var(--ink3);font-size:12px;margin-top:3px}
 nav{display:flex;gap:6px;overflow-x:auto;padding:9px 0 13px;scrollbar-width:none;position:sticky;top:0;background:var(--bg);z-index:20;border-bottom:1px solid var(--line);margin-bottom:18px}
 nav::-webkit-scrollbar{display:none}
 nav button{flex:0 0 auto;border:1px solid var(--line2);background:var(--card);color:var(--ink2);padding:7px 15px;border-radius:999px;font-size:13.5px;font-family:var(--font);cursor:pointer;transition:.15s}
-nav button.on{background:var(--green);border-color:var(--green);color:#fff;font-weight:500}
-nav button:not(.on):hover{border-color:var(--green);color:var(--green-d)}
+nav button.on{background:var(--red);border-color:var(--red);color:#fff;font-weight:500}
+nav button:not(.on):hover{border-color:var(--red);color:var(--red)}
 section{display:none;animation:fade .22s ease}
 section.on{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
 .card.tint{background:var(--green-l);border-color:#DCE8DC}
-.card.warmtint{background:var(--warm-l);border-color:#F0E2D2}
-.card.redtint{background:var(--red-l);border-color:#F3D5D1}
+.card.redtint{background:var(--red-l);border-color:#F3D5CF}
 h2{font-size:17px;font-weight:600;margin:0 0 4px}
 h3{font-size:14.5px;font-weight:600;margin:18px 0 8px}
 .hint{font-size:12.5px;color:var(--ink3);margin:0 0 14px;line-height:1.6}
-.hint b{color:var(--ink2);font-weight:500}
-.big{font-size:34px;font-weight:600;color:var(--green-d);line-height:1.2;letter-spacing:-1px}
-.big span{font-size:15px;color:var(--ink3);font-weight:400;letter-spacing:0}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line2);background:var(--card);color:var(--ink2);padding:7px 13px;border-radius:var(--rs);font-size:13px;font-family:var(--font);cursor:pointer;transition:.15s;white-space:nowrap}
-.btn:hover{border-color:var(--green);color:var(--green-d)}
-.btn.pri{background:var(--green);border-color:var(--green);color:#fff}
-.btn.pri:hover{background:var(--green-d);color:#fff}
-.btn.sm{padding:4px 9px;font-size:12px}
-.btn.danger{color:var(--rose);border-color:#EBD4D0}
-.btn.danger:hover{border-color:var(--rose);color:var(--rose)}
-.btn:disabled{opacity:.45;cursor:default}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line2);background:var(--card);color:var(--ink2);padding:8px 14px;border-radius:var(--rs);font-size:13px;font-family:var(--font);cursor:pointer;transition:.15s;white-space:nowrap}
+.btn:hover{border-color:var(--red);color:var(--red)}
+.btn.pri{background:var(--red);border-color:var(--red);color:#fff}
+.btn.pri:hover{background:var(--red-d);color:#fff}
+.btn.sm{padding:5px 10px;font-size:12px}
+.btn.danger{color:var(--red-d);border-color:#EBD4D0}
+.btn.danger:hover{border-color:var(--red-d);color:var(--red-d)}
+.btn.grow{flex:1}
 .row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
-.grow{flex:1;min-width:0}
+.mini{font-size:12px;color:var(--ink3)}
+.red{color:var(--red)}
 input[type=text],input[type=number],input[type=date],textarea,select{font-family:var(--font);font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line2);border-radius:var(--rs);padding:9px 11px;outline:none;width:100%}
-input:focus,textarea:focus,select:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-l)}
+input:focus,textarea:focus,select:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-l)}
 textarea{resize:vertical;line-height:1.8}
 label.lbl{font-size:12.5px;color:var(--ink2);display:block;margin:0 0 5px}
-.field{margin-bottom:14px}
-.pill{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:999px;background:var(--green-l);color:var(--green-d);font-weight:500;white-space:nowrap}
-.pill.warm{background:var(--warm-l);color:var(--warm)}
-.pill.rose{background:var(--rose-l);color:var(--rose)}
-.pill.gray{background:#F2F1EC;color:var(--ink3)}
-.pill.node{background:var(--green);color:#fff}
-.pill.red{background:var(--red-l);color:var(--red)}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
-th{font-size:12px;color:var(--ink3);font-weight:500;background:#FCFBF7}
-tr:last-child td{border-bottom:none}
-.tbl-scroll{overflow-x:auto;margin:0 -18px;padding:0 18px}
-.check{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;cursor:pointer}
-.check:last-child{border-bottom:none}
-.check input{width:18px;height:18px;flex:0 0 auto;margin-top:3px;accent-color:var(--green)}
-.check.done span{color:var(--ink3);text-decoration:line-through}
-.check span{flex:1}
+.field{margin-bottom:13px;flex:1;min-width:0}
 .note{font-size:12.5px;color:var(--ink2);background:#FCFBF7;border-left:3px solid var(--line2);padding:9px 12px;border-radius:0 var(--rs) var(--rs) 0;margin:10px 0;line-height:1.7}
-.note.warn{background:var(--rose-l);border-left-color:#DCA9A3;color:#8B4B45}
-.note.ok{background:var(--green-l);border-left-color:#A8C6AE;color:var(--green-d)}
-.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:10px 20px;border-radius:999px;font-size:13.5px;opacity:0;pointer-events:none;transition:.25s;z-index:99;max-width:90vw;text-align:center}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:10px 20px;border-radius:999px;font-size:13.5px;opacity:0;pointer-events:none;transition:.25s;z-index:200;max-width:90vw;text-align:center}
 .toast.show{opacity:1;transform:translate(-50%,0)}
-.divider{height:1px;background:var(--line);margin:18px 0}
-.mini{font-size:12px;color:var(--ink3)}
-.hidden{display:none!important}
+.empty{text-align:center;color:var(--ink3);font-size:13.5px;padding:36px 10px}
+.empty-sm{text-align:center;color:var(--ink3);font-size:12.5px;padding:16px 6px}
+.kv{display:grid;grid-template-columns:88px 1fr;gap:7px 12px;font-size:13.5px;margin-top:8px}
+.kv dt{color:var(--ink3);font-size:12.5px}
+.kv dd{margin:0}
+.chev{color:var(--ink3);font-size:15px;transition:.2s}
+.chev.open{transform:rotate(180deg)}
 
 /* 进度条 */
-.prog-wrap{margin-top:12px}
-.prog-label{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink2);margin-bottom:7px}
-.prog-label b{color:var(--red)}
+.prog-label{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink2);margin-bottom:8px}
 .segs{display:flex;gap:4px}
-.seg{flex:1;height:12px;border-radius:3px;background:#E4E1D8;transition:.2s}
+.seg{flex:1;height:12px;border-radius:3px;background:#EADDD9;transition:.2s}
 .seg.fill{background:var(--red)}
-.inv-edit{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap}
-.inv-edit input[type=number]{width:96px}
+.inv-edit{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.inv-edit input[type=number]{width:92px}
 
-/* SOP 步骤卡 */
-.step{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:16px 16px 16px 54px;margin-bottom:12px;background:var(--card);transition:.15s}
-.step.done{background:var(--green-l);border-color:#DCE8DC}
-.step-num{position:absolute;left:14px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--warm-l);color:var(--warm);font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center}
-.step.done .step-num{background:var(--green);color:#fff}
-.step-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
-.step-title{font-size:15.5px;font-weight:600;flex:1;min-width:120px}
-.step.done .step-title{color:var(--green-d)}
-.time-badge{font-size:11.5px;padding:2px 9px;border-radius:999px;background:var(--blue-l);color:#3F6E82;font-weight:500;white-space:nowrap}
-.step-chk{position:absolute;right:14px;top:18px;width:20px;height:20px;accent-color:var(--green);cursor:pointer}
-.step-desc{font-size:13px;color:var(--ink2);line-height:1.7}
-.subcheck{padding:5px 0;font-size:13px;display:flex;gap:9px;align-items:flex-start;cursor:pointer}
-.subcheck input{width:16px;height:16px;accent-color:var(--green);flex:0 0 auto;margin-top:3px}
-.subcheck.done span{color:var(--ink3);text-decoration:line-through}
-.tpl-box{background:#FCFBF7;border:1px dashed var(--line2);border-radius:var(--rs);padding:11px 12px;margin-top:10px;font-size:12.5px;line-height:1.8;white-space:pre-wrap;color:var(--ink2)}
-.pub-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
-.pub{padding:4px 11px;border-radius:999px;border:1px solid var(--line2);font-size:12px;cursor:pointer;color:var(--ink3);background:var(--card)}
-.pub.on{background:var(--green);border-color:var(--green);color:#fff;font-weight:500}
+/* KPI */
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.kpi-num{font-size:30px;font-weight:600;color:var(--red);line-height:1.2;letter-spacing:-1px}
+.kpi-lb{font-size:12.5px;color:var(--ink3);margin-top:3px}
 
-/* 拍摄 */
-.shot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px;margin-top:10px}
-.shot{border:1px solid var(--line);border-radius:var(--rs);padding:11px;cursor:pointer;background:var(--card);transition:.15s}
-.shot.on{background:var(--green-l);border-color:#A8C6AE}
-.shot .k{font-size:12px;font-weight:600;color:var(--green-d)}
-.shot .n{font-size:13.5px;font-weight:600;margin:2px 0}
-.shot .d{font-size:11.5px;color:var(--ink3);line-height:1.5}
-.place{display:flex;gap:9px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
-.place:last-child{border-bottom:none}
-.place .box{width:18px;height:18px;flex:0 0 auto;margin-top:2px;accent-color:var(--green)}
-.place .nm{font-size:13.5px;font-weight:500}
-.place .wk{font-size:11.5px;color:var(--ink3)}
-.place.visited .nm{color:var(--ink3);text-decoration:line-through}
-.flowline{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
-.flowline .t{font-size:11.5px;font-weight:600;color:#fff;background:var(--warm);padding:2px 8px;border-radius:6px;white-space:nowrap}
-.flowline .w{font-size:13px;color:var(--ink2)}
+/* 投票 */
+.vote-list{margin-top:6px}
+.vote-row{display:flex;gap:10px;align-items:center;padding:7px 0}
+.vote-rank{width:20px;height:20px;border-radius:50%;background:var(--red-l);color:var(--red-d);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.vote-main{flex:1;min-width:0}
+.vote-name{font-size:13px;margin-bottom:4px}
+.vote-track{height:7px;background:#F0EDE5;border-radius:4px;overflow:hidden}
+.vote-fill{height:100%;background:var(--red);border-radius:4px;transition:.3s}
+.vote-count{font-size:12px;color:var(--ink3);white-space:nowrap}
+
+/* 最佳视频 */
+.best-title{font-size:15px;font-weight:600;line-height:1.5;margin:8px 0 4px}
+.best-meta{font-size:12px;color:var(--ink3)}
+.stat-row{display:flex;gap:18px;margin-top:10px;font-size:13px;color:var(--ink2)}
+
+/* 筛选 */
+.filter-row{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none}
+.filter-row::-webkit-scrollbar{display:none}
+.fbtn{flex:0 0 auto;border:1px solid var(--line2);background:var(--card);color:var(--ink2);padding:6px 12px;border-radius:999px;font-size:12.5px;font-family:var(--font);cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.fbtn.on{background:var(--red);border-color:var(--red);color:#fff}
+.fnum{font-size:10.5px;opacity:.75;background:rgba(0,0,0,.06);padding:0 6px;border-radius:999px}
+.fbtn.on .fnum{background:rgba(255,255,255,.25)}
+
+/* 视频卡片 */
+.vcard{padding:0;overflow:hidden}
+.vc-head{display:flex;gap:11px;align-items:flex-start;padding:15px 16px 6px;cursor:pointer}
+.vc-idx{font-size:11px;font-weight:600;color:var(--red-d);background:var(--red-l);padding:3px 8px;border-radius:6px;white-space:nowrap;margin-top:2px}
+.vc-main{flex:1;min-width:0}
+.vc-title{font-size:14.5px;font-weight:600;line-height:1.45}
+.vc-sub{font-size:11.5px;color:var(--ink3);margin-top:3px}
+.vc-side{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex:0 0 auto}
+.vc-tags{display:flex;gap:5px;flex-wrap:wrap;padding:0 16px 13px}
+.pp{font-size:10.5px;padding:2px 7px;border-radius:5px;background:#F2F1EC;color:var(--ink3)}
+.pp.on{background:var(--green-l);color:var(--green-d);font-weight:500}
+.pp.warm{background:var(--warm-l);color:var(--warm)}
+.vc-detail{border-top:1px solid var(--line);padding:12px 16px;background:#FDFCFA}
+.dline{display:flex;gap:10px;font-size:12.5px;line-height:1.7;padding:5px 0;border-bottom:1px dashed var(--line)}
+.dline:last-of-type{border-bottom:none}
+.dk{color:var(--ink3);flex:0 0 62px}
+.dline span:last-child{color:var(--ink2);white-space:pre-wrap;word-break:break-word}
+.vc-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.pill{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:999px;font-weight:500;white-space:nowrap;background:var(--green-l);color:var(--green-d)}
+.pill.gray{background:#F2F1EC;color:var(--ink3)}
+.st-to_shoot{background:#F2F1EC;color:var(--ink2)}
+.st-editing{background:var(--warm-l);color:var(--warm)}
+.st-to_publish{background:var(--blue-l);color:#3F6E82}
+.st-published{background:var(--green-l);color:var(--green-d)}
+
+/* 地点卡片 */
+.pc-head{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.pc-main{flex:1;min-width:0}
+.pc-name{font-size:15px;font-weight:600}
+.pc-meta{display:flex;gap:6px;margin-top:5px}
+.pc-feats{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.feat{font-size:11.5px;color:var(--ink2);display:inline-flex;align-items:center;gap:3px}
+.yn{font-weight:600}
+.yn.yes{color:var(--green)}
+.yn.no{color:var(--ink3)}
+.pc-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap}
+.stars{color:var(--warm);letter-spacing:1px}
+.pc-note{font-size:12.5px;color:var(--ink2);background:#FCFBF7;border-radius:var(--rs);padding:8px 11px;margin-top:10px;line-height:1.6}
+
+/* 弹层 */
+.overlay{position:fixed;inset:0;background:rgba(30,28,24,.4);z-index:100;display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--bg);width:100%;max-width:640px;max-height:92vh;border-radius:18px 18px 0 0;display:flex;flex-direction:column;box-shadow:0 -8px 30px rgba(0,0,0,.12)}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)}
+.sheet-head h2{margin:0}
+.xbtn{border:none;background:none;font-size:18px;color:var(--ink3);cursor:pointer;padding:4px 8px}
+.sheet-body{padding:16px 18px;overflow-y:auto;flex:1}
+.sheet-foot{display:flex;gap:10px;padding:14px 18px;border-top:1px solid var(--line);background:var(--card)}
+.sheet-foot .btn{flex:1}
+.frow{display:flex;gap:10px}
+.frow3{display:flex;gap:8px}
+.frow3 .field{min-width:0}
+.shotboxes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.shotbox{display:flex;flex-wrap:wrap;align-items:center;gap:5px;border:1px solid var(--line2);border-radius:var(--rs);padding:8px;font-size:12.5px;cursor:pointer;background:var(--card)}
+.shotbox.on{background:var(--green-l);border-color:#A8C6AE}
+.shotbox input{accent-color:var(--green);margin:0}
+.shotbox small{width:100%;font-size:10.5px;color:var(--ink3);line-height:1.4}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tog-grid{display:flex;flex-wrap:wrap;gap:8px}
+.tog{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:6px 12px;font-size:12.5px;cursor:pointer;background:var(--card)}
+.tog input{accent-color:var(--green);margin:0}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="brand"><h1>小言在路上</h1><span class="sub">| 359的重启 · 视频制作台</span></div>
+    <div class="brand"><h1>小言在路上</h1><span class="sub">| 亚马逊清仓重启</span></div>
     <p class="motto">在风景里搞钱的松弛感<small>70% 治愈风景 + 30% 亚马逊工作切片 · 深圳光明</small></p>
   </header>
   <nav id="nav"></nav>
-  <section id="s-today"></section>
-  <section id="s-sop"></section>
-  <section id="s-shoot"></section>
-  <section id="s-method"></section>
+  <section id="s-dash"></section>
+  <section id="s-videos"></section>
+  <section id="s-places"></section>
+  <section id="s-data"></section>
   <div id="toast" class="toast"></div>
 </div>
 <script id="DATA" type="application/json">{
   "meta": {
     "name": "小言在路上",
-    "sub": "359的重启 · 视频制作台",
+    "sub": "亚马逊清仓重启",
     "motto": "在风景里搞钱的松弛感",
     "motto2": "70% 治愈风景 + 30% 亚马逊工作切片 · 深圳光明"
   },
-  "sop": [
-    {
-      "id": "s1",
-      "num": "①",
-      "title": "写底稿",
-      "min": "20 分钟",
-      "platforms": [],
-      "desc": "手机备忘录写所见所感 + 1 个亚马逊实操复盘，约 800–1000 字。这是所有内容的素材母体。",
-      "subs": [
-        "记录今天的所见所感（风景、心情、路上细节）",
-        "写 1 个亚马逊实操复盘（清仓进展 / 找新品 / 踩坑）",
-        "提炼 1 句金句，留作封面与图文标题"
-      ],
-      "tpl": "【底稿结构】\n1）开场：今天去了哪里 + 一个反差画面（面朝风景敲键盘）\n2）过程：拍摄时的真实感受 + 一个具体细节\n3）复盘：亚马逊今天做了什么（清了几单 / 看了什么品 / 一个教训）\n4）金句：一句能独立传播的话\n5）预告：下次想去哪里，引导评论区推荐",
-      "script": {
-        "title": "脚本三段式 + 第1集分镜 + 封面标题",
-        "body": "【脚本三段式】\n前3秒钩子：反差画面「面朝大海敲键盘」\n中间：过程与干货\n结尾：升华 + 预告（引导评论区推荐打卡点）\n\n【第1集分镜（45秒–1分钟）】\n镜头1 · 前3秒 · 红色栈道POV —「在深圳做亚马逊亏了两年，仓库里还剩359个库存」\n镜头2 · 10秒 · 树荫木长椅+开电脑 — 反差转场\n镜头3 · 15秒 · 备忘录特写「当前库存:359 准备找新品」+咖啡/保温杯 — 点题\n镜头4 · 15秒 · 合上电脑拍夕阳/长影子 — 升华互动\n\n【封面大字（二选一）】\n《亚马逊亏了两年，我把工位搬进了深圳公园》\n《从359个库存开始，一个跨境人的重启日记》"
-      },
-      "quote": "在风景里搞钱，本身就是一种重启。"
-    },
-    {
-      "id": "s2",
-      "num": "②",
-      "title": "剪核心短片",
-      "min": "35–40 分钟",
-      "platforms": ["抖音", "小红书"],
-      "desc": "剪映串联镜头，调色后录旁白、加智能字幕与轻音乐，发抖音 + 小红书。",
-      "subs": [
-        "剪映串联 A–E 镜头，每段 5–10 秒，竖屏 9:16",
-        "调色：对比度 +10、锐化 +15，应用到全部",
-        "录旁白 + 智能字幕 + 轻音乐（音量 10%）",
-        "导出发布 → 抖音 + 小红书"
-      ],
-      "tpl": "【剪映参数备忘】\n对比度 +10\n锐化 +15（应用到全部）\n轻音乐音量 10%\n旁白用无线领夹麦录，风大时优先保证收音\n\n【发布标题参考】\n在深圳公园里搞钱的第 N 天｜亚马逊清仓日记",
-      "quote": "真实记录失败，比虚构成功更圈粉。"
-    },
-    {
-      "id": "s3",
-      "num": "③",
-      "title": "发图文",
-      "min": "15 分钟",
-      "platforms": ["小红书", "公众号"],
-      "desc": "截高清图 + 金句发小红书图文；底稿润色后发公众号沉淀私域。",
-      "subs": [
-        "截 3–4 张「风景 + 电脑」高清图",
-        "配金句 → 小红书图文（有时比视频更容易爆）",
-        "底稿润色 → 公众号深度图文（1000–1500 字）"
-      ],
-      "tpl": "【小红书图文文案】\n标题：在深圳公园办公，我把亚马逊亏本 Live 了下来\n正文：\n今天把工位搬到了（地点）。\n面朝（风景）打开电脑的那一刻，突然觉得亏了两年也没那么难熬。\n（1 句亚马逊复盘）\n（金句）\n📍坐标：深圳光明\n#深圳周末去哪儿 #跨境电商日常 #数字游民 #不露脸",
-      "quote": "有时候图文比视频更容易爆。"
-    },
-    {
-      "id": "s4",
-      "num": "④",
-      "title": "B站整合",
-      "min": "30 分钟（周末）",
-      "platforms": ["B站"],
-      "desc": "本周 2–3 条短 Vlog 合并成周记，加 BGM 与片头片尾，B站观众很吃连续剧感。",
-      "subs": [
-        "把本周 2–3 条短 Vlog 合并",
-        "加 BGM + 片头片尾",
-        "标题：《深圳亚马逊清仓周记 Vol.N》→ B站"
-      ],
-      "tpl": "【B站周记结构】\n片头：3 秒快剪本周高光 + 标题卡\n正片：按天分段，每段一个小标题（第几天 / 地点 / 清仓进展）\n片尾：库存进度特写 + 下期预告 + 引导三连\n\n【标题】《深圳亚马逊清仓周记 Vol.N｜在公园办公的第 N 周》",
-      "quote": "有连续剧感的内容，长尾最值钱。"
-    }
+  "statuses": [
+    {"id": "to_shoot", "name": "待拍摄"},
+    {"id": "editing", "name": "剪辑中"},
+    {"id": "to_publish", "name": "待发布"},
+    {"id": "published", "name": "已发布"}
   ],
-  "platforms": [
-    {"name": "抖音", "spec": "45秒–1分钟竖屏快节奏 · 流量放大器"},
-    {"name": "小红书", "spec": "精美风景+电脑拼图文 / 1分钟内短视频 · 精准同频"},
-    {"name": "B站", "spec": "3–6分钟横屏慢节奏周记 · 深度信任长尾IP"},
-    {"name": "公众号", "spec": "1000–1500字深度图文 · 私域沉淀"}
-  ],
+  "platforms": ["抖音", "小红书", "B站", "公众号"],
   "shots": [
-    {"id": "A", "name": "环境", "desc": "标志性风光（红桥/山海/教堂）"},
-    {"id": "B", "name": "状态", "desc": "开电脑、敲键盘、喝水的侧影"},
-    {"id": "C", "name": "工作细节", "desc": "屏幕局部，敏感数据打码，展示库存数字"},
-    {"id": "D", "name": "生活细节", "desc": "简餐咖啡 / 小动物"},
-    {"id": "E", "name": "收尾", "desc": "日落 / 华灯初上"}
+    {"id": "A", "name": "环境", "desc": "标志性风光"},
+    {"id": "B", "name": "状态", "desc": "开电脑/敲键盘侧影"},
+    {"id": "C", "name": "工作细节", "desc": "屏幕局部（敏感数据打码）"},
+    {"id": "D", "name": "生活细节", "desc": "简餐咖啡/小动物"},
+    {"id": "E", "name": "收尾", "desc": "日落/华灯初上"}
   ],
-  "noFace": [
-    {"k": "pov", "d": "POV 开场"},
-    {"k": "close", "d": "局部特写：手 + 电脑"},
-    {"k": "reflection", "d": "倒影与影子：光明之眼水池"},
-    {"k": "back", "d": "远景背影：人只占画面十分之一"}
-  ],
-  "dayFlow": [
-    {"t": "7:00–10:00", "w": "人少免费自然景点拍摄（深圳湾日出/梧桐山/大沙河）"},
-    {"t": "10:00–16:00", "w": "咖啡馆/书吧办公，拍「风景+电脑」延时（核心视觉锤）"},
-    {"t": "16:30–19:00", "w": "日落与城市烟火（西湾红树林/华强北/坂田）"}
-  ],
-  "places": [
-    {"id": "w1", "week": "第1周", "spots": ["虹桥公园（红桥·首发）", "光明文化艺术中心"]},
-    {"id": "w2", "week": "第2周", "spots": ["大顶岭绿道（三桥）", "茅洲河碧道"]},
-    {"id": "w3", "week": "第3周", "spots": ["南头古城", "华强北"]},
-    {"id": "w4", "week": "第4周", "spots": ["深圳湾公园", "盐田灯塔图书馆"]}
-  ],
-  "rules": [
-    "前两周不看播放量，前 8 条当「练手」和「存档案」",
-    "工作第一，忙不过来果断停更",
-    "唯一翻车点：为了拍视频而假装清仓，或者断更烂尾"
-  ],
-  "budget": {
-    "daily": 30,
-    "gear": ["手机（主力）", "迷你三脚架自拍杆", "无线领夹麦克风", "轻薄笔记本", "手机热点 / 随身WiFi", "充电宝", "降噪耳机"],
-    "note": "不买昂贵相机、无人机；一天户外办公成本控制在 30 元以内"
-  },
-  "quotes": [
-    "在风景里搞钱，本身就是一种重启。",
-    "把工位搬进公园，亏本的日子也能透口气。",
-    "剩 359 个库存，也剩 359 个重新开始的机会。",
-    "不露脸，反而更敢说真话。",
-    "清仓是主线，山海是背景，活着是本体。",
-    "今天的日落，是给昨天的亏损盖的章。",
-    "慢一点没关系，只要在往前走。"
+  "placeTypes": ["公园", "绿道", "图书馆", "咖啡馆", "商圈", "海边", "创意园", "文化场馆", "其他"],
+  "quote": "把工位搬进公园，亏本的日子也能透口气。",
+  "seedPlaces": [
+    {"id": "p1", "name": "虹桥公园", "area": "光明区", "type": "公园", "wifi": false, "socket": false, "toilet": true, "quiet": true, "scenery": 5, "laptopOk": false, "note": "红色栈道，破局重启的彩头；适合拍红桥背影"},
+    {"id": "p2", "name": "光明文化艺术中心", "area": "光明区", "type": "文化场馆", "wifi": true, "socket": true, "toilet": true, "quiet": true, "scenery": 4, "laptopOk": true, "note": "清水混凝土+光明之眼倒影；旁边图书馆有空调插座"},
+    {"id": "p3", "name": "大顶岭绿道（三桥）", "area": "光明区", "type": "绿道", "wifi": false, "socket": false, "toilet": false, "quiet": true, "scenery": 5, "laptopOk": false, "note": "悬桥/探桥/浮桥，森林覆盖率高；电脑放车里"},
+    {"id": "p4", "name": "茅洲河碧道", "area": "光明区", "type": "公园", "wifi": false, "socket": false, "toilet": true, "quiet": true, "scenery": 4, "laptopOk": true, "note": "开阔河岸拍日落绝佳；带野餐垫席地办公"},
+    {"id": "p5", "name": "南头古城", "area": "南山区", "type": "创意园", "wifi": true, "socket": false, "toilet": true, "quiet": false, "scenery": 4, "laptopOk": true, "note": "复古街巷+创意小店，选品灵感"},
+    {"id": "p6", "name": "华强北", "area": "福田区", "type": "商圈", "wifi": true, "socket": true, "toilet": true, "quiet": false, "scenery": 3, "laptopOk": true, "note": "深圳跨境精神地标，城市烟火气"},
+    {"id": "p7", "name": "深圳湾公园", "area": "南山区", "type": "海边", "wifi": false, "socket": false, "toilet": true, "quiet": true, "scenery": 5, "laptopOk": false, "note": "日出+跨海大桥，海风大注意收音"},
+    {"id": "p8", "name": "盐田灯塔图书馆", "area": "盐田区", "type": "图书馆", "wifi": true, "socket": true, "toilet": true, "quiet": true, "scenery": 5, "laptopOk": true, "note": "海边白色灯塔，安静办公出片"}
   ]
 }
 </script>
-<script>/* ============ 小言视频制作台 ============ */
-const KEY = 'xy-vlog-studio-v1';
+<script>/* ============ 小言在路上 · 视频制作工作台 ============ */
+const KEY = 'xy-vlog-studio-v2';
 const $ = s => document.querySelector(s);
 const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const DATA = JSON.parse($('#DATA').textContent);
+const D = JSON.parse($('#DATA').textContent);
+const PLATS = D.platforms;
+const STATUS = D.statuses;
 
 function deepMerge(base, patch){
   if(!patch || typeof patch!=='object' || Array.isArray(patch)) return base;
@@ -289,43 +236,36 @@ function deepMerge(base, patch){
   }
   return base;
 }
-
+const blankVideo = () => ({
+  id: '', station: '', place: '', title: '', hook: '', script: '',
+  shots: {}, invBefore: '', invAfter: '', clearedToday: '', workSlice: '',
+  platforms: { '抖音':'未发', '小红书':'未发', 'B站':'未发', '公众号':'未发' },
+  views: '', likes: '', comments: '', review: '', nextVote: '',
+  pubDate: '', status: 'to_shoot'
+});
 const DEFAULT = () => ({
-  version: 1,
-  startDate: '',
-  cycle: 1,
+  version: 2,
   inventory: { start: 359, current: 359 },
-  sop: { cycles: {} },
-  shooting: { sessions: [] },
-  places: { visited: {} },
-  notes: { today: '', ideas: '' },
+  videos: [],
+  places: JSON.parse(JSON.stringify(D.seedPlaces)),
+  votes: {},
   settings: { quote: '' }
 });
 let S = DEFAULT();
 try{ const raw = localStorage.getItem(KEY); if(raw){ deepMerge(S, JSON.parse(raw)); } }catch(e){}
-const save = () => { try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){ toast('本地存储写入失败，建议导出备份'); } };
+const save = () => { try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){ toast('本地存储写入失败，请导出备份'); } };
 
 let toastTimer;
 function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),2200); }
-function copy(text,label){
-  const done=()=>toast((label||'已复制')+' ✓');
-  if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(text).then(done).catch(()=>fallback()); } else fallback();
-  function fallback(){ const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');done();}catch(e){toast('复制失败，请手动选中');} document.body.removeChild(ta); }
-}
-function cycleKey(){ return String(S.cycle); }
-function cyc(){
-  const k = cycleKey();
-  if(!S.sop.cycles[k]) S.sop.cycles[k] = { s1:step(), s2:step(), s3:step(), s4:step(), published:{douyin:false,xhs:false,wechat:false,bilibili:false} };
-  const c = S.sop.cycles[k];
-  ['s1','s2','s3','s4'].forEach(id=>{ if(!c[id]) c[id]=step(); });
-  if(!c.published) c.published={douyin:false,xhs:false,wechat:false,bilibili:false};
-  return c;
-}
-function step(){ return { done:false, note:'', at:'', subs:{} }; }
-function todayStr(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+function today(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function weekStart(){ const d=new Date(); const day=(d.getDay()+6)%7; d.setDate(d.getDate()-day); d.setHours(0,0,0,0); return d; }
+function inWeek(dateStr){ if(!dateStr) return false; const t=new Date(dateStr+'T00:00:00'); return t>=weekStart() && t<=new Date(); }
+function num(v){ const n=parseInt(v); return isNaN(n)?0:n; }
+function fmt(n){ return n>=10000? (n/10000).toFixed(1)+'w' : String(n); }
 
-/* ---------- nav ---------- */
-const TABS=[['today','今天'],['sop','一鱼四吃'],['shoot','拍摄'],['method','方法与数据']];
+/* ---------- 导航 ---------- */
+const TABS=[['dash','仪表盘'],['videos','视频'],['places','地点库'],['data','数据']];
 $('#nav').innerHTML = TABS.map((t,i)=>`<button data-t="${t[0]}" class="${i===0?'on':''}">${t[1]}</button>`).join('');
 $('#nav').addEventListener('click',e=>{ const b=e.target.closest('button[data-t]'); if(!b)return; go(b.dataset.t); });
 function go(t){
@@ -333,271 +273,332 @@ function go(t){
   document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id==='s-'+t));
   render(t); window.scrollTo({top:0,behavior:'smooth'});
 }
-function render(t){ ({today:rToday,sop:rSop,shoot:rShoot,method:rMethod})[t](); }
+function render(t){ ({dash:rDash,videos:rVideos,places:rPlaces,data:rData})[t](); }
 
-/* ---------- 今天 ---------- */
-function rToday(){
-  const c = cyc();
-  const done = ['s1','s2','s3','s4'].filter(id=>c[id].done).length;
-  const cur = S.inventory.current, start = S.inventory.start;
+/* ---------- 通用：库存进度条 ---------- */
+function invBar(){
+  const cur=S.inventory.current, start=S.inventory.start;
   const pct = start>0 ? Math.max(0,Math.min(100,Math.round((1-cur/start)*100))) : 0;
-  const filled = Math.round((cur/start)*10);
-  const segs = Array.from({length:10},(_,i)=>`<div class="seg ${i<filled?'fill':''}"></div>`).join('');
-  const quote = S.settings.quote || DATA.quotes[Math.floor(Math.random()*DATA.quotes.length)];
-  const lastShoot = S.shooting.sessions.length ? S.shooting.sessions[S.shooting.sessions.length-1] : null;
-  $('#s-today').innerHTML = `
+  const filled = start>0 ? Math.round((cur/start)*10) : 0;
+  const segs=Array.from({length:10},(_,i)=>`<div class="seg ${i<filled?'fill':''}"></div>`).join('');
+  return `<div class="prog-label"><span>剩余 <b class="red">${cur}</b> 件</span><span>${start} → 0 · 已清 ${pct}%</span></div><div class="segs">${segs}</div>`;
+}
+
+/* ---------- 仪表盘 ---------- */
+function rDash(){
+  const vs=S.videos;
+  const pubThisWeek = vs.filter(v=>v.status==='published' && inWeek(v.pubDate)).length;
+  const editing = vs.filter(v=>v.status==='editing').length;
+  const toShoot = vs.filter(v=>v.status==='to_shoot').length;
+  const toPub = vs.filter(v=>v.status==='to_publish').length;
+
+  const tally={};
+  Object.entries(S.votes||{}).forEach(x=>{ if(x[1]>0) tally[x[0]]=(tally[x[0]]||0)+x[1]; });
+  vs.forEach(v=>{ if(v.nextVote && v.nextVote.trim()) tally[v.nextVote.trim()]=(tally[v.nextVote.trim()]||0)+1; });
+  const top=Object.entries(tally).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+  let best=vs.filter(v=>num(v.views)>0 && inWeek(v.pubDate)).sort((a,b)=>num(b.views)-num(a.views))[0];
+  if(!best) best=vs.filter(v=>num(v.views)>0).sort((a,b)=>num(b.views)-num(a.views))[0];
+
+  $('#s-dash').innerHTML=`
     <div class="card redtint">
-      <h2>库存进度 <span class="pill red">第 ${S.cycle} 期</span></h2>
-      <p class="hint">每期视频要拍的「进度条特写」素材，数字只存在你手机里</p>
-      <div class="prog-wrap">
-        <div class="prog-label"><span>当前剩余 <b>${cur}</b> 件</span><span>起始 ${start} 件 · 已清 ${pct}%</span></div>
-        <div class="segs">${segs}</div>
-      </div>
+      <h2>📦 库存进度</h2>
+      ${invBar()}
       <div class="inv-edit">
-        <label class="lbl" style="margin:0">更新库存</label>
-        <input type="number" id="invCur" value="${cur}" min="0">
+        <label class="lbl" style="margin:0">更新剩余库存</label>
+        <input type="number" id="invCur" value="${S.inventory.current}" min="0">
         <button class="btn sm pri" id="invSave">保存</button>
-        <span class="mini">起始数 <input type="number" id="invStart" value="${start}" min="1" style="width:78px;display:inline-block;padding:4px 7px"></span>
+        <span class="mini">起始 <input type="number" id="invStart" value="${S.inventory.start}" min="1" style="width:76px;display:inline-block;padding:4px 7px"></span>
       </div>
     </div>
 
+    <div class="kpi-grid">
+      <div class="kpi"><div class="kpi-num">${S.inventory.current}</div><div class="kpi-lb">剩余库存</div></div>
+      <div class="kpi"><div class="kpi-num">${pubThisWeek}</div><div class="kpi-lb">本周发布</div></div>
+      <div class="kpi"><div class="kpi-num">${editing}</div><div class="kpi-lb">待剪辑</div></div>
+      <div class="kpi"><div class="kpi-num">${toShoot+toPub}</div><div class="kpi-lb">待拍+待发</div></div>
+    </div>
+
     <div class="card">
-      <h2>本期一鱼四吃</h2>
-      <p class="hint">四步做完一条内容线，做一步也算没断</p>
-      <div class="row" style="gap:14px">
-        <div class="big">${done}<span> / 4 步</span></div>
-        <div class="grow" style="text-align:right"><button class="btn sm" id="goSop">去打卡 →</button></div>
-      </div>
-      <div class="flowline" style="margin-top:16px">
-        ${['s1','s2','s3','s4'].map(id=>{const s=DATA.sop.find(x=>x.id===id);return `<span class="pill ${c[id].done?'':'gray'}">${s.num} ${s.title}</span>`;}).join('<span class="mini">→</span>')}
+      <h2>🗳️ 下一站投票</h2>
+      <p class="hint">在视频卡片填「下一站投票」，或直接点下面投票。</p>
+      ${top.length?`<div class="vote-list">${top.map((x,i)=>{
+        const max=top[0][1]||1;
+        return `<div class="vote-row"><span class="vote-rank">${i+1}</span><div class="vote-main"><div class="vote-name">${esc(x[0])}</div><div class="vote-track"><div class="vote-fill" style="width:${Math.round(x[1]/max*100)}%"></div></div></div><span class="vote-count">${x[1]}票</span></div>`;
+      }).join('')}</div>`:`<div class="empty-sm">还没有投票，先给下一站投一票吧</div>`}
+      <div class="row" style="margin-top:12px">
+        <select id="votePlace" class="grow"><option value="">选地点投票…</option>${S.places.map(p=>`<option value="${esc(p.name)}">${esc(p.name)}</option>`).join('')}</select>
+        <button class="btn sm pri" id="voteBtn">投票</button>
       </div>
     </div>
 
     <div class="card tint">
-      <h2>今日一句话</h2>
-      <p style="font-size:15px;line-height:1.8;margin:8px 0 12px;color:var(--green-d)">「${esc(quote)}」</p>
-      <button class="btn sm" id="quoteBtn">换一句</button>
-      <button class="btn sm" id="quoteCopy">复制</button>
+      <h2>⭐ 本周最佳视频</h2>
+      ${best?`<div class="best-title">${esc(best.title||'（无标题）')}</div>
+      <div class="best-meta">${best.station?'第'+esc(best.station)+'站 · ':''}${esc(best.place||'未填地点')} ${best.pubDate?'· '+esc(best.pubDate):''}</div>
+      <div class="stat-row"><span>▶ ${fmt(num(best.views))}</span><span>♥ ${fmt(num(best.likes))}</span><span>💬 ${fmt(num(best.comments))}</span></div>
+      <div class="row" style="margin-top:10px"><button class="btn sm" data-edit="${best.id}">编辑这条</button></div>`
+      :`<div class="empty-sm">还没有带播放数据的视频，发布后回填数据就能评比</div>`}
     </div>
 
     <div class="card">
-      <h2>拍摄提醒</h2>
-      ${lastShoot?`<p class="hint">上次拍摄：${esc(lastShoot.date)} · ${esc(lastShoot.place||'未填地点')}</p>`:`<p class="hint">还没有拍摄记录，出门前先去「拍摄」页照着清单拍。</p>`}
-      <div class="row"><button class="btn pri" id="goShoot">新建拍摄日</button><span class="mini">每周 2 次户外，每次约 3 小时</span></div>
+      <h2>快速开一条</h2>
+      <div class="row"><button class="btn pri" id="quickAdd">+ 新增视频</button><button class="btn" id="goVideos">查看全部 ${vs.length} 条</button></div>
     </div>
-
-    <div class="note warn">纪律：${esc(DATA.rules[0])}；工作第一，忙不过来果断停更。</div>
+    <div class="note">${esc(D.quote)}</div>
   `;
 
-  $('#invSave').onclick = ()=>{ const v=parseInt($('#invCur').value); if(isNaN(v)){toast('请输入数字');return;} S.inventory.current=Math.max(0,v); save(); render('today'); toast('库存已更新'); };
-  $('#invStart').onchange = (e)=>{ const v=parseInt(e.target.value); if(!isNaN(v)&&v>0){ S.inventory.start=v; save(); render('today'); } };
-  $('#goSop').onclick = ()=>go('sop');
-  $('#goShoot').onclick = ()=>go('shoot');
-  $('#quoteBtn').onclick = ()=>{ const q=DATA.quotes[Math.floor(Math.random()*DATA.quotes.length)]; S.settings.quote=q; save(); render('today'); };
-  $('#quoteCopy').onclick = ()=>copy($('#s-today .tint p').textContent.replace(/[「」]/g,''),'金句');
+  $('#invSave').onclick=()=>{ const v=parseInt($('#invCur').value); if(isNaN(v)){toast('请输入数字');return;} S.inventory.current=Math.max(0,v); save(); render('dash'); toast('库存已更新'); };
+  $('#invStart').onchange=e=>{ const v=parseInt(e.target.value); if(!isNaN(v)&&v>0){S.inventory.start=v;save();render('dash');} };
+  $('#voteBtn').onclick=()=>{ const name=$('#votePlace').value; if(!name){toast('先选一个地点');return;} S.votes[name]=(S.votes[name]||0)+1; save(); render('dash'); toast('已投给 '+name); };
+  $('#goVideos').onclick=()=>go('videos');
+  $('#quickAdd').onclick=()=>openVideo();
+  document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openVideo(b.dataset.edit));
 }
 
-/* ---------- 一鱼四吃 ---------- */
-function rSop(){
-  const c = cyc();
-  const stepsHtml = DATA.sop.map(s=>{
-    const st = c[s.id];
-    const subsHtml = s.subs.map((sub,i)=>`<label class="subcheck ${st.subs[i]?'done':''}"><input type="checkbox" data-step="${s.id}" data-sub="${i}" ${st.subs[i]?'checked':''}><span>${esc(sub)}</span></label>`).join('');
-    const pubHtml = s.platforms.length?`<div class="pub-row">${s.platforms.map(p=>`<span class="pub ${c.published[p]?'on':''}" data-pub="${p}">${p}</span>`).join('')}</div>`:'';
-    return `<div class="step ${st.done?'done':''}">
-      <div class="step-num">${s.num}</div>
-      <input type="checkbox" class="step-chk" data-done="${s.id}" ${st.done?'checked':''} title="完成本步">
-      <div class="step-head"><div class="step-title">${esc(s.title)}</div><span class="time-badge">${esc(s.min)}</span></div>
-      <div class="step-desc">${esc(s.desc)}</div>
-      <div style="margin-top:10px">${subsHtml}</div>
-      ${pubHtml}
-      ${s.tpl?`<div class="tpl-box">${esc(s.tpl)}</div><button class="btn sm" data-copytpl="${s.id}" style="margin-top:8px">复制模板</button>`:''}
-      ${s.script?`<div style="margin-top:12px"><button class="btn sm" data-script="1">📋 展开脚本模板 / 第1集分镜 / 封面标题</button><div class="tpl-box hidden" id="scriptBox">${esc(s.script.body)}</div><button class="btn sm hidden" data-copyscript="1" id="copyScriptBtn" style="margin-top:8px">复制脚本</button></div>`:''}
-      <div class="field" style="margin-top:12px;margin-bottom:0"><label class="lbl">本步备注</label><textarea data-note="${s.id}" rows="2" placeholder="记一句这一步的情况…">${esc(st.note)}</textarea></div>
-      ${st.at?`<div class="mini" style="margin-top:6px">完成于 ${esc(st.at)}</div>`:''}
-    </div>`;
-  }).join('');
-
-  $('#s-sop').innerHTML = `
-    <div class="card">
-      <h2>一鱼四吃 · 第 ${S.cycle} 期</h2>
-      <p class="hint">写底稿 → 剪核心短片 → 发图文 → B站整合。一次素材，四种产出。每周拍 2 次、做 2 组。</p>
-      <div class="row"><span class="pill">本期 ${['s1','s2','s3','s4'].filter(id=>c[id].done).length}/4 步</span><button class="btn sm" id="newCycle">新建下一期 →</button></div>
+/* ---------- 视频列表 + 筛选 ---------- */
+let FILTER='all';
+let EXPANDED={};
+function statusPill(id){ const s=STATUS.find(x=>x.id===id)||STATUS[0]; return `<span class="pill st-${id}">${s.name}</span>`; }
+function rVideos(){
+  const list=S.videos.filter(v=>FILTER==='all'||v.status===FILTER);
+  const counts={all:S.videos.length};
+  STATUS.forEach(s=>counts[s.id]=S.videos.filter(v=>v.status===s.id).length);
+  const tabs=[['all','全部'],...STATUS.map(s=>[s.id,s.name])];
+  $('#s-videos').innerHTML=`
+    <div class="card" style="padding:12px">
+      <div class="filter-row">${tabs.map(t=>`<button class="fbtn ${FILTER===t[0]?'on':''}" data-f="${t[0]}">${t[1]}<span class="fnum">${counts[t[0]]}</span></button>`).join('')}</div>
     </div>
-    ${stepsHtml}
-    <div class="card warmtint">
-      <h2>剪映参数速查</h2>
-      <div class="kv" style="grid-template-columns:78px 1fr">
-        <dt>对比度</dt><dd>+10</dd>
-        <dt>锐化</dt><dd>+15（应用到全部）</dd>
-        <dt>轻音乐</dt><dd>音量 10%</dd>
-        <dt>字幕</dt><dd>智能字幕 + 自己录旁白</dd>
-        <dt>画幅</dt><dd>竖屏 9:16，每段 5–10 秒</dd>
-      </div>
-      <div class="note warn" style="margin-bottom:0">屏幕局部镜头（C）记得给敏感数据打码。</div>
+    <div class="row" style="margin-bottom:14px"><button class="btn pri grow" id="addVideo">+ 新增视频</button></div>
+    <div id="videoList">
+      ${list.length? list.map(v=>videoCard(v)).join('') : `<div class="card"><div class="empty">这个分类还没有视频<br><button class="btn sm pri" id="emptyAdd" style="margin-top:10px">新增一条</button></div></div>`}
     </div>
   `;
+  document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{FILTER=b.dataset.f;render('videos');});
+  $('#addVideo').onclick=()=>openVideo();
+  const ea=$('#emptyAdd'); if(ea) ea.onclick=()=>openVideo();
+  bindVideoCards();
+}
+function videoCard(v){
+  const open=!!EXPANDED[v.id];
+  const platHtml=PLATS.map(p=>`<span class="pp ${v.platforms[p]==='已发'?'on':''}">${p}${v.platforms[p]==='已发'?'✓':''}</span>`).join('');
+  const shotsOn=D.shots.filter(s=>v.shots[s.id]).map(s=>s.id).join('');
+  return `<div class="card vcard">
+    <div class="vc-head" data-toggle="${v.id}">
+      <div class="vc-idx">${v.station?'第'+esc(v.station)+'站':'—'}</div>
+      <div class="vc-main">
+        <div class="vc-title">${esc(v.title||'（无标题）')}</div>
+        <div class="vc-sub">${esc(v.place||'未填地点')}${v.pubDate?' · '+esc(v.pubDate):''}${shotsOn?' · 镜头'+shotsOn:''}</div>
+      </div>
+      <div class="vc-side">${statusPill(v.status)}<span class="chev ${open?'open':''}">▾</span></div>
+    </div>
+    <div class="vc-tags">${platHtml}${num(v.views)>0?`<span class="pp">▶${fmt(num(v.views))}</span>`:''}${v.nextVote?`<span class="pp warm">下一站:${esc(v.nextVote)}</span>`:''}</div>
+    ${open?`<div class="vc-detail">
+      ${v.hook?`<div class="dline"><span class="dk">3秒钩子</span><span>${esc(v.hook)}</span></div>`:''}
+      ${v.script?`<div class="dline"><span class="dk">脚本</span><span>${esc(v.script)}</span></div>`:''}
+      ${v.workSlice?`<div class="dline"><span class="dk">工作切片</span><span>${esc(v.workSlice)}</span></div>`:''}
+      ${(v.invBefore!==''||v.invAfter!==''||v.clearedToday!=='')?`<div class="dline"><span class="dk">库存</span><span>${esc(v.invBefore)}→${esc(v.invAfter)} · 今日清 ${esc(v.clearedToday)}</span></div>`:''}
+      ${v.review?`<div class="dline"><span class="dk">复盘</span><span>${esc(v.review)}</span></div>`:''}
+      ${v.nextVote?`<div class="dline"><span class="dk">下一站</span><span>${esc(v.nextVote)}</span></div>`:''}
+      <div class="vc-actions">
+        <button class="btn sm" data-edit="${v.id}">编辑</button>
+        <button class="btn sm danger" data-del="${v.id}">删除</button>
+      </div>
+    </div>`:''}
+  </div>`;
+}
+function bindVideoCards(){
+  document.querySelectorAll('[data-toggle]').forEach(el=>el.onclick=()=>{const id=el.dataset.toggle;EXPANDED[id]=!EXPANDED[id];render('videos');});
+  document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=e=>{e.stopPropagation();openVideo(b.dataset.edit);});
+  document.querySelectorAll('[data-del]').forEach(b=>b.onclick=e=>{
+    e.stopPropagation(); const id=b.dataset.del;
+    if(!confirm('删除这条视频？无法撤销。'))return;
+    S.videos=S.videos.filter(x=>x.id!==id); save(); render('videos'); toast('已删除');
+  });
+}
 
-  // done
-  document.querySelectorAll('[data-done]').forEach(el=>el.onchange=()=>{
-    const id=el.dataset.done; c[id].done=el.checked; c[id].at=el.checked?todayStr():'';
-    save(); render('sop'); toast(el.checked?'本步完成 ✓':'已取消');
-  });
-  // subs
-  document.querySelectorAll('[data-sub]').forEach(el=>el.onchange=()=>{
-    const id=el.dataset.step, i=parseInt(el.dataset.sub); c[id].subs[i]=el.checked; save(); render('sop');
-  });
-  // published
-  document.querySelectorAll('[data-pub]').forEach(el=>el.onclick=()=>{
-    const p=el.dataset.pub; c.published[p]=!c.published[p]; save(); render('sop'); toast(c.published[p]?p+' 已发布':'取消 '+p);
-  });
-  // copy tpl
-  document.querySelectorAll('[data-copytpl]').forEach(el=>el.onclick=()=>{
-    const s=DATA.sop.find(x=>x.id===el.dataset.copytpl); copy(s.tpl,s.title+'模板');
-  });
-  // note
-  document.querySelectorAll('[data-note]').forEach(el=>el.onchange=()=>{ c[el.dataset.note].note=el.value; save(); toast('备注已保存'); });
-  // script toggle
-  const sb=$('#scriptBox');
-  document.querySelector('[data-script]')?.addEventListener('click',e=>{ sb.classList.toggle('hidden'); $('#copyScriptBtn').classList.toggle('hidden'); e.target.textContent = sb.classList.contains('hidden')?'📋 展开脚本模板 / 第1集分镜 / 封面标题':'收起脚本模板'; });
-  document.querySelector('[data-copyscript]')?.addEventListener('click',()=>{ const s=DATA.sop.find(x=>x.script); copy(s.script.body,'脚本模板'); });
-  // new cycle
-  $('#newCycle').onclick = ()=>{
-    if(!confirm('新建下一期？本期数据会保留，当前期数 +1。')) return;
-    S.cycle++; save(); render('sop'); toast('已新建第 '+S.cycle+' 期');
+/* ---------- 视频表单弹层 ---------- */
+function openVideo(id){
+  const v = id ? S.videos.find(x=>x.id===id) : blankVideo();
+  if(!v){toast('未找到该视频');return;}
+  const isNew=!v.id;
+  const shotBoxes=D.shots.map(s=>`<label class="shotbox ${v.shots[s.id]?'on':''}"><input type="checkbox" data-shot="${s.id}" ${v.shots[s.id]?'checked':''}><b>${s.id}</b> ${esc(s.name)}<small>${esc(s.desc)}</small></label>`).join('');
+  const platSel=PLATS.map(p=>`<div class="pfield"><label class="lbl">${p}</label><select data-plat="${p}"><option>未发</option><option>已发</option></select></div>`).join('');
+  const html=`<div class="overlay" id="veil">
+    <div class="sheet">
+      <div class="sheet-head"><h2>${isNew?'新增视频':'编辑视频'}</h2><button class="xbtn" id="closeSheet">✕</button></div>
+      <div class="sheet-body">
+        <div class="frow"><div class="field"><label class="lbl">站数</label><input type="text" id="fStation" value="${esc(v.station)}" placeholder="如 3"></div>
+        <div class="field"><label class="lbl">地点</label><input type="text" id="fPlace" value="${esc(v.place)}" placeholder="如 虹桥公园" list="placeOpts"></div></div>
+        <datalist id="placeOpts">${S.places.map(p=>`<option value="${esc(p.name)}">`).join('')}</datalist>
+        <div class="field"><label class="lbl">标题</label><input type="text" id="fTitle" value="${esc(v.title)}" placeholder="视频标题"></div>
+        <div class="field"><label class="lbl">3秒钩子</label><input type="text" id="fHook" value="${esc(v.hook)}" placeholder="前3秒抓人画面/台词"></div>
+        <div class="field"><label class="lbl">脚本</label><textarea id="fScript" rows="4" placeholder="分镜/旁白稿">${esc(v.script)}</textarea></div>
+        <div class="field"><label class="lbl">拍摄清单</label><div class="shotboxes">${shotBoxes}</div></div>
+        <div class="frow3">
+          <div class="field"><label class="lbl">库存前</label><input type="number" id="fInvB" value="${esc(v.invBefore)}" placeholder="359"></div>
+          <div class="field"><label class="lbl">库存后</label><input type="number" id="fInvA" value="${esc(v.invAfter)}" placeholder="350"></div>
+          <div class="field"><label class="lbl">今日清掉</label><input type="number" id="fCleared" value="${esc(v.clearedToday)}" placeholder="9"></div>
+        </div>
+        <div class="field"><label class="lbl">工作切片（亚马逊实操）</label><textarea id="fWork" rows="2" placeholder="这天做了什么亚马逊工作">${esc(v.workSlice)}</textarea></div>
+        <div class="field"><label class="lbl">发布状态</label><div class="pgrid">${platSel}</div></div>
+        <div class="frow3">
+          <div class="field"><label class="lbl">播放</label><input type="number" id="fViews" value="${esc(v.views)}" placeholder="0"></div>
+          <div class="field"><label class="lbl">点赞</label><input type="number" id="fLikes" value="${esc(v.likes)}" placeholder="0"></div>
+          <div class="field"><label class="lbl">评论</label><input type="number" id="fComments" value="${esc(v.comments)}" placeholder="0"></div>
+        </div>
+        <div class="field"><label class="lbl">复盘</label><textarea id="fReview" rows="2" placeholder="这条哪里好/哪里差">${esc(v.review)}</textarea></div>
+        <div class="frow"><div class="field"><label class="lbl">下一站投票</label><input type="text" id="fVote" value="${esc(v.nextVote)}" placeholder="想去的下个地点" list="placeOpts"></div>
+        <div class="field"><label class="lbl">发布日期</label><input type="date" id="fDate" value="${esc(v.pubDate)}"></div></div>
+        <div class="field"><label class="lbl">制作阶段</label><select id="fStatus">${STATUS.map(s=>`<option value="${s.id}" ${v.status===s.id?'selected':''}>${s.name}</option>`).join('')}</select></div>
+      </div>
+      <div class="sheet-foot"><button class="btn" id="cancelSheet">取消</button><button class="btn pri" id="saveSheet">保存</button></div>
+    </div>
+  </div>`;
+  document.body.insertAdjacentHTML('beforeend',html);
+  document.body.style.overflow='hidden';
+  const veil=$('#veil');
+  const close=()=>{veil.remove();document.body.style.overflow='';};
+  $('#closeSheet').onclick=close; $('#cancelSheet').onclick=close;
+  veil.onclick=e=>{if(e.target===veil)close();};
+  $('#saveSheet').onclick=()=>{
+    const nv={
+      id: v.id||uid(),
+      station:$('#fStation').value.trim(), place:$('#fPlace').value.trim(),
+      title:$('#fTitle').value.trim(), hook:$('#fHook').value.trim(), script:$('#fScript').value,
+      shots:{}, invBefore:$('#fInvB').value, invAfter:$('#fInvA').value, clearedToday:$('#fCleared').value,
+      workSlice:$('#fWork').value, platforms:{}, views:$('#fViews').value, likes:$('#fLikes').value,
+      comments:$('#fComments').value, review:$('#fReview').value, nextVote:$('#fVote').value.trim(),
+      pubDate:$('#fDate').value, status:$('#fStatus').value
+    };
+    document.querySelectorAll('[data-shot]').forEach(c=>nv.shots[c.dataset.shot]=c.checked);
+    document.querySelectorAll('[data-plat]').forEach(c=>nv.platforms[c.dataset.plat]=c.value);
+    if(isNew) S.videos.unshift(nv);
+    else { const i=S.videos.findIndex(x=>x.id===v.id); S.videos[i]=nv; }
+    save(); close(); render('videos'); toast(isNew?'已新增':'已保存');
   };
 }
 
-/* ---------- 拍摄 ---------- */
-function rShoot(){
-  const sessions = S.shooting.sessions;
-  const cur = sessions[sessions.length-1];
-  const shots = DATA.shots.map(s=>{
-    const on = cur && cur.shots[s.id];
-    return `<div class="shot ${on?'on':''}" data-shot="${s.id}"><div class="k">${s.id}</div><div class="n">${esc(s.name)}</div><div class="d">${esc(s.desc)}</div></div>`;
-  }).join('');
-  const noface = DATA.noFace.map(n=>{
-    const on = cur && cur.noface[n.k];
-    return `<label class="subcheck ${on?'done':''}"><input type="checkbox" data-noface="${n.k}" ${on?'checked':''}><span>${esc(n.d)}</span></label>`;
-  }).join('');
-  const flow = DATA.dayFlow.map(f=>`<div class="flowline"><span class="t">${esc(f.t)}</span><span class="w">${esc(f.w)}</span></div>`).join('');
-  const places = DATA.places.map((w,wi)=>`
-    <h3>${esc(w.week)}</h3>
-    ${w.spots.map(sp=>{const key=w.id+'|'+sp;const on=S.places.visited[key];return `<div class="place ${on?'visited':''}" data-place="${esc(key)}"><input type="checkbox" class="box" ${on?'checked':''}><div><div class="nm">${esc(sp)}</div><div class="wk">${esc(w.week)}打卡点</div></div></div>`;}).join('')}
-  `).join('');
-
-  $('#s-shoot').innerHTML = `
+/* ---------- 地点库 ---------- */
+function yesNo(b){ return b?'<span class="yn yes">✓</span>':'<span class="yn no">✕</span>'; }
+function rPlaces(){
+  $('#s-places').innerHTML=`
     <div class="card">
-      <h2>本次拍摄清单</h2>
-      <p class="hint">出门前照着拍，每段 5–10 秒，竖屏 9:16。拍一条勾一条。</p>
-      <div class="row">
-        <input type="date" id="shootDate" class="grow" value="${cur?esc(cur.date):todayStr()}">
-        <input type="text" id="shootPlace" class="grow" placeholder="地点，如 虹桥公园" value="${cur?esc(cur.place||''):''}">
-      </div>
-      <div style="margin-top:6px"><button class="btn sm pri" id="newSession">+ 新建拍摄日</button><span class="mini" style="margin-left:8px">共 ${sessions.length} 次记录</span></div>
-      <div class="shot-grid" style="margin-top:6px">${shots}</div>
-      <h3>不露脸 4 类镜头</h3>
-      ${noface}
-      <div class="field" style="margin-top:14px;margin-bottom:0"><label class="lbl">拍摄小结</label><textarea id="shootNote" rows="2" placeholder="今天拍得顺不顺、光线如何…">${cur?esc(cur.note||''):''}</textarea></div>
+      <h2>📍 地点库</h2>
+      <p class="hint">记录每个点的办公友好度和风景分，出门前挑一个最合适的。</p>
+      <button class="btn pri" id="addPlace">+ 新增地点</button>
     </div>
-
-    <div class="card">
-      <h2>每日动线</h2>
-      <p class="hint">户外 1.5 小时 + 回家 1.5 小时，一次约 3 小时。</p>
-      ${flow}
-    </div>
-
-    <div class="card">
-      <h2>首月打卡地图</h2>
-      <p class="hint">点一下标记已拍。全部免费。</p>
-      ${places}
-    </div>
-    <div class="note warn">C 镜头「工作细节」拍屏幕时务必给客户/库存敏感数据打码。</div>
+    <div id="placeList">${S.places.length? S.places.map(p=>placeCard(p)).join(''):'<div class="card"><div class="empty">还没有地点</div></div>'}</div>
   `;
-
-  function ensureCur(){
-    if(cur) return cur;
-    const ns={id:Date.now(),date:todayStr(),place:'',shots:{},noface:{},note:''};
-    S.shooting.sessions.push(ns); return ns;
-  }
-  $('#newSession').onclick = ()=>{
-    const ns={id:Date.now(),date:$('#shootDate').value||todayStr(),place:$('#shootPlace').value.trim(),shots:{},noface:{},note:''};
-    S.shooting.sessions.push(ns); save(); render('shoot'); toast('新拍摄日已建立');
-  };
-  document.querySelectorAll('[data-shot]').forEach(el=>el.onclick=()=>{
-    const s=ensureCur(); const id=el.dataset.shot; s.shots[id]=!s.shots[id]; save(); render('shoot');
+  $('#addPlace').onclick=()=>openPlace();
+  bindPlaceCards();
+}
+function placeCard(p){
+  const feats=[['WiFi',p.wifi],['插座',p.socket],['厕所',p.toilet],['安静',p.quiet]].map(f=>`<span class="feat">${yesNo(f[1])}${f[0]}</span>`).join('');
+  const stars='★'.repeat(p.scenery)+'☆'.repeat(5-p.scenery);
+  return `<div class="card pcard">
+    <div class="pc-head" data-pedit="${p.id}">
+      <div class="pc-main"><div class="pc-name">${esc(p.name)}</div><div class="pc-meta"><span class="pill gray">${esc(p.area)}</span><span class="pill">${esc(p.type)}</span></div></div>
+      <span class="chev">▸</span>
+    </div>
+    <div class="pc-feats">${feats}</div>
+    <div class="pc-row"><span class="mini">风景 <b class="stars">${stars}</b></span><span class="pill ${p.laptopOk?'':'gray'}">${p.laptopOk?'💻 适合带电脑':'⚠ 不太适合电脑'}</span></div>
+    ${p.note?`<div class="pc-note">${esc(p.note)}</div>`:''}
+    <div class="vc-actions"><button class="btn sm" data-pedit="${p.id}">编辑</button><button class="btn sm danger" data-pdel="${p.id}">删除</button><button class="btn sm" data-pvote="${p.id}">投它当下一站</button></div>
+  </div>`;
+}
+function bindPlaceCards(){
+  document.querySelectorAll('[data-pedit]').forEach(b=>b.onclick=e=>{e.stopPropagation();openPlace(b.dataset.pedit);});
+  document.querySelectorAll('[data-pdel]').forEach(b=>b.onclick=e=>{
+    e.stopPropagation(); const id=b.dataset.pdel;
+    if(!confirm('删除这个地点？'))return;
+    S.places=S.places.filter(x=>x.id!==id); save(); render('places'); toast('已删除');
   });
-  document.querySelectorAll('[data-noface]').forEach(el=>el.onchange=()=>{
-    const s=ensureCur(); s.noface[el.dataset.noface]=el.checked; save(); render('shoot');
-  });
-  $('#shootNote').onchange = (e)=>{ const s=ensureCur(); s.note=e.target.value; save(); toast('小结已保存'); };
-  $('#shootDate').onchange = (e)=>{ if(cur){cur.date=e.target.value;save();} };
-  $('#shootPlace').onchange = (e)=>{ if(cur){cur.place=e.target.value;save();} };
-  document.querySelectorAll('[data-place]').forEach(el=>el.onclick=(e)=>{
-    if(e.target.tagName==='INPUT') return;
-    const key=el.dataset.place; S.places.visited[key]=!S.places.visited[key]; save(); render('shoot');
+  document.querySelectorAll('[data-pvote]').forEach(b=>b.onclick=e=>{
+    e.stopPropagation(); const p=S.places.find(x=>x.id===b.dataset.pvote);
+    if(!p)return; S.votes[p.name]=(S.votes[p.name]||0)+1; save(); toast('已投给 '+p.name);
   });
 }
+function openPlace(id){
+  const p = id ? S.places.find(x=>x.id===id) : {id:'',name:'',area:'',type:'公园',wifi:false,socket:false,toilet:false,quiet:false,scenery:3,laptopOk:false,note:''};
+  if(!p){toast('未找到');return;}
+  const isNew=!p.id;
+  const chk=(k,label)=>`<label class="tog"><input type="checkbox" data-pf="${k}" ${p[k]?'checked':''}><span>${label}</span></label>`;
+  const html=`<div class="overlay" id="veil"><div class="sheet">
+    <div class="sheet-head"><h2>${isNew?'新增地点':'编辑地点'}</h2><button class="xbtn" id="closeSheet">✕</button></div>
+    <div class="sheet-body">
+      <div class="frow"><div class="field"><label class="lbl">地点名</label><input type="text" id="pName" value="${esc(p.name)}" placeholder="如 虹桥公园"></div>
+      <div class="field"><label class="lbl">区域</label><input type="text" id="pArea" value="${esc(p.area)}" placeholder="如 光明区"></div></div>
+      <div class="field"><label class="lbl">类型</label><select id="pType">${D.placeTypes.map(t=>`<option ${p.type===t?'selected':''}>${t}</option>`).join('')}</select></div>
+      <div class="field"><label class="lbl">设施</label><div class="tog-grid">
+        ${chk('wifi','有 WiFi')}${chk('socket','有插座')}${chk('toilet','有厕所')}${chk('quiet','够安静')}${chk('laptopOk','适合带电脑')}
+      </div></div>
+      <div class="field"><label class="lbl">风景分（1–5）</label><input type="number" id="pScenery" value="${p.scenery}" min="1" max="5"></div>
+      <div class="field"><label class="lbl">备注</label><textarea id="pNote" rows="2" placeholder="拍摄/办公提示">${esc(p.note)}</textarea></div>
+    </div>
+    <div class="sheet-foot"><button class="btn" id="cancelSheet">取消</button><button class="btn pri" id="saveSheet">保存</button></div>
+  </div></div>`;
+  document.body.insertAdjacentHTML('beforeend',html);
+  document.body.style.overflow='hidden';
+  const veil=$('#veil'); const close=()=>{veil.remove();document.body.style.overflow='';};
+  $('#closeSheet').onclick=close; $('#cancelSheet').onclick=close;
+  veil.onclick=e=>{if(e.target===veil)close();};
+  $('#saveSheet').onclick=()=>{
+    const np={ id:p.id||uid(), name:$('#pName').value.trim(), area:$('#pArea').value.trim(),
+      type:$('#pType').value, scenery:Math.max(1,Math.min(5,parseInt($('#pScenery').value)||3)),
+      note:$('#pNote').value };
+    document.querySelectorAll('[data-pf]').forEach(c=>np[c.dataset.pf]=c.checked);
+    if(isNew) S.places.unshift(np); else { const i=S.places.findIndex(x=>x.id===p.id); S.places[i]=np; }
+    save(); close(); render('places'); toast(isNew?'已新增':'已保存');
+  };
+}
 
-/* ---------- 方法与数据 ---------- */
-function rMethod(){
-  const plats = DATA.platforms.map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.spec)}</td></tr>`).join('');
-  const rules = DATA.rules.map(r=>`<label class="check"><input type="checkbox" disabled><span>${esc(r)}</span></label>`).join('');
-  const gear = DATA.budget.gear.map(g=>`<span class="pill gray">${esc(g)}</span>`).join(' ');
-  $('#s-method').innerHTML = `
+/* ---------- 数据管理 ---------- */
+function rData(){
+  const stored=(()=>{ try{return (localStorage.getItem(KEY)||'').length;}catch(e){return 0;} })();
+  $('#s-data').innerHTML=`
     <div class="card">
-      <h2>平台分工 · 一鱼四吃</h2>
-      <div class="tbl-scroll"><table><thead><tr><th>平台</th><th>规格与作用</th></tr></thead><tbody>${plats}</tbody></table></div>
+      <h2>💾 数据管理</h2>
+      <p class="hint">数据只存在这台设备浏览器里（当前约 ${(stored/1024).toFixed(1)} KB）。换机或清理前先导出备份。</p>
+      <div class="row"><button class="btn pri" id="expBtn">导出 JSON 备份</button><button class="btn" id="impBtn">导入 JSON 备份</button><input type="file" id="impFile" accept="application/json,.json" style="display:none"></div>
     </div>
     <div class="card">
-      <h2>视觉锤与人设</h2>
-      <div class="kv" style="grid-template-columns:78px 1fr">
-        <dt>核心符号</dt><dd>海边/山景 + 电脑屏幕（laptop-in-nature）</dd>
-        <dt>不露脸</dt><dd>手、电脑、影子、背影</dd>
-        <dt>emoji</dt><dd>📦 库存 · 💻 办公 · 🚐 房车梦 · 🌲 山海</dd>
-        <dt>内容公式</dt><dd>70% 治愈风景 + 30% 亚马逊工作切片</dd>
-        <dt>调性</dt><dd>真实记录与避坑，不装成功</dd>
+      <h2>📊 当前数据</h2>
+      <div class="kv" style="grid-template-columns:92px 1fr">
+        <dt>视频</dt><dd>${S.videos.length} 条</dd>
+        <dt>地点</dt><dd>${S.places.length} 个</dd>
+        <dt>剩余库存</dt><dd>${S.inventory.current} 件</dd>
+        <dt>投票</dt><dd>${Object.values(S.votes||{}).reduce((a,b)=>a+b,0)} 票</dd>
       </div>
-      <div class="note" style="margin-bottom:0">配色：天空蓝 #CFE3EA · 森林绿 #7BAE7F · 日落橙 #F3B562 · 混凝土灰 #C9C6BD · 虹桥红 #F2453D</div>
     </div>
     <div class="card">
-      <h2>纪律与预算</h2>
-      ${rules}
-      <div class="divider"></div>
-      <p class="hint" style="margin-bottom:6px">一天户外办公成本 ≤ ${DATA.budget.daily} 元 · 设备清单</p>
-      <div class="tag-cloud">${gear}</div>
-      <div class="note" style="margin-bottom:0">${esc(DATA.budget.note)}</div>
+      <h2>⚠️ 危险操作</h2>
+      <button class="btn danger" id="resetBtn">全局重置（清空所有数据）</button>
+      <p class="hint" style="margin-top:10px">重置后无法撤销，会恢复到初始示例地点库。</p>
     </div>
-    <div class="card">
-      <h2>数据管理</h2>
-      <p class="hint">数据只存在这台设备的浏览器里。换机或清理前请先导出备份。</p>
-      <div class="row"><button class="btn pri" id="expBtn">导出备份（JSON）</button><button class="btn" id="impBtn">导入备份</button><input type="file" id="impFile" accept="application/json,.json" style="display:none"></div>
-      <div class="divider"></div>
-      <div class="row"><button class="btn danger" id="resetBtn">全局重置</button><span class="mini">当前第 ${S.cycle} 期 · ${S.shooting.sessions.length} 次拍摄</span></div>
-    </div>
+    <div class="note">账号：小言在路上｜亚马逊清仓重启 · 本地工作台，无后端。</div>
   `;
-
-  $('#expBtn').onclick = ()=>{
+  $('#expBtn').onclick=()=>{
     const blob=new Blob([JSON.stringify(S,null,2)],{type:'application/json'});
     const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
-    a.download='小言制作台备份-'+todayStr()+'.json'; a.click();
+    a.download='小言工作台备份-'+today()+'.json'; a.click();
     setTimeout(()=>URL.revokeObjectURL(a.href),1000); toast('备份已导出');
   };
-  $('#impBtn').onclick = ()=>$('#impFile').click();
-  $('#impFile').onchange = (e)=>{
+  $('#impBtn').onclick=()=>$('#impFile').click();
+  $('#impFile').onchange=e=>{
     const f=e.target.files[0]; if(!f)return;
     const r=new FileReader();
-    r.onload=()=>{ try{ const p=JSON.parse(r.result); deepMerge(S,p); save(); render('method'); toast('备份已导入'); }catch(err){ toast('文件解析失败'); } };
+    r.onload=()=>{ try{ const p=JSON.parse(r.result); deepMerge(S,p); save(); render('data'); toast('备份已导入'); }catch(err){ toast('文件解析失败'); } };
     r.readAsText(f);
   };
-  $('#resetBtn').onclick = ()=>{
-    if(!confirm('确定全局重置？所有打卡、拍摄记录、库存进度都会清空，无法撤销。建议先导出备份。')) return;
-    localStorage.removeItem(KEY); S=DEFAULT(); save(); render('method'); toast('已重置');
+  $('#resetBtn').onclick=()=>{
+    if(!confirm('确定全局重置？所有视频、地点、库存、投票都会清空，无法撤销。建议先导出备份。'))return;
+    localStorage.removeItem(KEY); S=DEFAULT(); save(); render('data'); toast('已重置');
   };
 }
 
 /* ---------- boot ---------- */
-go('today');
+go('dash');
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){
   window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 }
