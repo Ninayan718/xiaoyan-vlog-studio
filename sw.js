@@ -1,5 +1,5 @@
 /* 小言视频制作台 SW — 改内容后升 CACHE 版本号 */
-const CACHE = 'xy-studio-v1';
+const CACHE = 'xy-studio-v2';
 const ASSETS = [
   './',
   './index.html',
